@@ -96,14 +96,13 @@ The complete lifecycle is:
 
 ```python
 started = await client.research.start(
-    notebook_id, query=query, source="web", mode="fast"  # or "deep"
+    notebook_id,
+    query=query,
+    source="web",
+    mode="fast",  # or "deep"
 )
-final = await client.research.wait_for_completion(
-    notebook_id, task_id=started.task_id, timeout=1800
-)
-imported = await client.research.import_sources(
-    notebook_id, started.task_id, final.sources[:max_sources]
-)
+final = await client.research.wait_for_completion(notebook_id, task_id=started.task_id, timeout=1800)
+imported = await client.research.import_sources(notebook_id, started.task_id, final.sources[:max_sources])
 ```
 
 The wrapper validates terminal status, caps imported sources, and supports returning
