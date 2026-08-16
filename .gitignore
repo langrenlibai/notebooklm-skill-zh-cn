@@ -1,0 +1,43 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+*.egg
+
+# Playwright
+.playwright/
+
+# NotebookLM auth cookies
+~/.notebooklm/
+.notebooklm/
+
+# Output artifacts
+output/
+*.mp3
+*.mp4
+*.m4a
+*.pdf
+
+# Node (for MCP server if needed)
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+.pymon
